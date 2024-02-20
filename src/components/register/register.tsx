@@ -83,6 +83,10 @@ export const Register = () => {
 
         if (registerWorkout?.success) {
           setShowMessage(true);
+
+          setTimeout(() => {
+            setShowMessage(false);
+          }, 3000);
         } else {
           setShowMessage(false);
           setErrorMessage(`${registerWorkout?.message}`);
@@ -152,7 +156,7 @@ export const Register = () => {
                 aria-label="Default select example"
               >
                 <option hidden>Séries</option>
-                {[2, 3, 4, 6, 8, 10, 12, 14, 16, 18, 20].map((value) => (
+                {[2, 3, 4, 6, 8, 10, 12, 15,18, 20].map((value) => (
                   <option key={value} value={String(value)}>
                     {value}
                   </option>
@@ -167,7 +171,7 @@ export const Register = () => {
                 aria-label="Default select example"
               >
                 <option hidden>Repetições</option>
-                {[6, 8, 10, 12, 14, 16, 20, 22, 24, 26, 28, 30].map((value) => (
+                {[6, 8, 10, 12, 15, 16, 18, 20, 22, 24, 26, 28, 30].map((value) => (
                   <option key={value} value={String(value)}>
                     {value}
                   </option>

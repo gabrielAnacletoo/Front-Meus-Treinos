@@ -3,7 +3,6 @@ import { loginPayload } from "../../config/types/types";
 
 
 export const Auth = async (loginPayload: loginPayload) => {
-    console.log('payload', loginPayload)
 const url = 'https://myworkouts.onrender.com/auth'
 
 try {
