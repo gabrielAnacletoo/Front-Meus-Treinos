@@ -31,7 +31,6 @@ export const Login = () => {
     try {
       setLoading(true);
       const AuthResult = await Auth(Data);
-      console.log(AuthResult);
 
       if (AuthResult) {
         localStorage.setItem("TOKEN", AuthResult.token);
@@ -39,7 +38,6 @@ export const Login = () => {
       }
     } catch (error) {
       setLoading(false);
-      //setErrorMessage(ERROR_MESSAGE_GENERIC);
       console.error("Erro ao carregar dados:", error);
     } finally {
       setLoading(false);
